@@ -6,4 +6,6 @@ fun main() {
     val client = Client(ModernFurnitureFactory())
 
     client.orderChair()
+
+    client.orderCoffeeTable()
 }
