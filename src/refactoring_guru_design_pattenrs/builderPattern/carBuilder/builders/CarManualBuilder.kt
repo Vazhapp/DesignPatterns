@@ -36,5 +36,5 @@ class CarManualBuilder : Builder {
     }
 
     val carManual
-        get() = CarManual(seatsNumber, engine, drivingSystem, setGps, setAutoPilot)
+        get() = CarManual(seatsNumber, engine, drivingSystem, setGps, setAutoPilot).generateManual()
 }
