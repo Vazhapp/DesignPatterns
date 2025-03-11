@@ -1,5 +1,7 @@
 package refactoring_guru_design_pattenrs.decoratorPattern.example
 
+import refactoring_guru_design_pattenrs.decoratorPattern.dressUpExample.*
+
 interface Notifier {
     fun send(message: String)
 }
@@ -63,5 +65,16 @@ fun main() {
         )
     )
 
-    sender.send("Hello Vazha")
+    val character: Character = BaseCharacter()
+    val manClothing = HatDecorator(
+        ShoesDecorator(
+            PantsDecorator(
+                ShirtDecorator(
+                    character
+                )
+            )
+        )
+    )
+    println(manClothing.dress())
+    println(manClothing.getCost())
 }
