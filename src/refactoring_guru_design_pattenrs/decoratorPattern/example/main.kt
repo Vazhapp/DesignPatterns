@@ -66,10 +66,10 @@ fun main() {
     )
 
     val character: Character = BaseCharacter()
-    val manClothing = HatDecorator(
-        ShoesDecorator(
-            PantsDecorator(
-                ShirtDecorator(
+    val manClothing = PantsDecorator(
+        ShirtDecorator(
+            ShoesDecorator(
+                HatDecorator(
                     character
                 )
             )
@@ -77,4 +77,18 @@ fun main() {
     )
     println(manClothing.dress())
     println(manClothing.getCost())
+
+    val womenClothing = PantsDecorator(
+        ShirtDecorator(
+            JacketDecorator(
+                ShoesDecorator(
+                    HatDecorator(
+                        character
+                    )
+                )
+            )
+        )
+    )
+    println(womenClothing.dress())
+    println(womenClothing.getCost())
 }
