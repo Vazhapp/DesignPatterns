@@ -1,16 +1,9 @@
 package refactoring_guru_design_pattenrs.adapterPattern
 
-import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.adapter.WavToMediaAdapter
-import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.legacyMediaPlayer.LegacyMediaPlayer
-import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.modernMediaPlayer.ModernMediaPlayer
 import refactoring_guru_design_pattenrs.adapterPattern.powerPlugs.EuFridge
 import refactoring_guru_design_pattenrs.adapterPattern.powerPlugs.UsToEuPowerAdapter
 import refactoring_guru_design_pattenrs.adapterPattern.powerPlugs.euPowerPlug.EUPowerPlug
 import refactoring_guru_design_pattenrs.adapterPattern.powerPlugs.usPowerPlug.USPowerPlug
-import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.adapter.SquarePegAdapter
-import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.round.RoundHole
-import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.round.RoundPeg
-import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.square.SquarePeg
 
 fun main() {
     /*** This is Shapes example
