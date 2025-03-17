@@ -1,5 +1,8 @@
 package refactoring_guru_design_pattenrs.adapterPattern
 
+import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.adapter.WavToMediaAdapter
+import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.legacyMediaPlayer.LegacyMediaPlayer
+import refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.modernMediaPlayer.ModernMediaPlayer
 import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.adapter.SquarePegAdapter
 import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.round.RoundHole
 import refactoring_guru_design_pattenrs.adapterPattern.shapesExample.round.RoundPeg
@@ -25,4 +28,14 @@ fun main() {
      *         println("Not Fitter Large Square Peg")
      */
 
+
+    val legacyMediaPlayer = LegacyMediaPlayer()
+    val modernMediaPlayer = ModernMediaPlayer()
+
+    legacyMediaPlayer.playWav("qorwili")
+    modernMediaPlayer.play("mp3", "qorwili")
+
+    val adapter = WavToMediaAdapter(legacyMediaPlayer)
+
+    adapter.play("mp3", "fulebis shovna")
 }
