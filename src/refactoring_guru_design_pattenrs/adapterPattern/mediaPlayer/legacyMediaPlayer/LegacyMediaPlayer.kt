@@ -2,6 +2,6 @@ package refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.legacyMediaP
 
 class LegacyMediaPlayer {
     fun playWav(fileName: String) {
-        println("Playing WAV Files")
+        println("Playing WAV File: $fileName")
     }
 }

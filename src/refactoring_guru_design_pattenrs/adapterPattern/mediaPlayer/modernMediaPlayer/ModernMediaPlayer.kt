@@ -3,10 +3,10 @@ package refactoring_guru_design_pattenrs.adapterPattern.mediaPlayer.modernMediaP
 class ModernMediaPlayer : MediaPlayer {
     override fun play(fileType: String, fileName: String) {
         when(fileType.lowercase()) {
-            "wav" -> println("Playing WAV File")
-            "mp3" -> println("Playing MP3 File")
-            "aac" -> println("Playing AAC File")
-            else -> println("Unsupported Media File")
+            "wav" -> println("Playing WAV File: $fileName")
+            "mp3" -> println("Playing MP3 File: $fileName")
+            "aac" -> println("Playing AAC File: $fileName")
+            else -> println("Unsupported Media File: $fileName")
         }
     }
 }
