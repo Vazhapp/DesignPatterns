@@ -5,6 +5,7 @@ import refactoring_guru_design_pattenrs.adapterPattern.powerPlugs.usPowerPlug.US
 
 class UsToEuPowerAdapter(private val usPowerPlug: USPowerPlug) : EUPowerPlug() {
     override fun provide220V(): Int {
+        println("Adapting 110V to 220V")
         return usPowerPlug.provide110V().times(2)
     }
 }
