@@ -29,13 +29,16 @@ fun main() {
      */
 
 
-    val legacyMediaPlayer = LegacyMediaPlayer()
-    val modernMediaPlayer = ModernMediaPlayer()
+    /** This is MediaPlayer example
+     *     val legacyMediaPlayer = LegacyMediaPlayer()
+     *     val modernMediaPlayer = ModernMediaPlayer()
+     *
+     *     legacyMediaPlayer.playWav("qorwili")
+     *     modernMediaPlayer.play("mp3", "qorwili")
+     *
+     *     val adapter = WavToMediaAdapter(legacyMediaPlayer)
+     *
+     *     adapter.play("mp3", "fulebis shovna")
+     */
 
-    legacyMediaPlayer.playWav("qorwili")
-    modernMediaPlayer.play("mp3", "qorwili")
-
-    val adapter = WavToMediaAdapter(legacyMediaPlayer)
-
-    adapter.play("mp3", "fulebis shovna")
 }
