@@ -2,7 +2,7 @@ package refactoring_guru_design_pattenrs.bridgePattern.devices
 
 class Radio : Devices {
     private var isEnabled = false
-    private var channel: Channels? = null
+    private var channel = 0
     private var volume = 50
 
     override fun isEnabled(): Boolean = isEnabled
@@ -21,11 +21,9 @@ class Radio : Devices {
         this.volume = volume
     }
 
-    override fun getChannel(): String {
-        return channel?.name ?: "Channel not found"
-    }
+    override fun getChannel(): Int = channel
 
-    override fun setChannel(channel: Channels) {
+    override fun setChannel(channel: Int) {
         this.channel = channel
     }
 

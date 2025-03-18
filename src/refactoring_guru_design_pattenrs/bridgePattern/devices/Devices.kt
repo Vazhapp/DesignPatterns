@@ -6,7 +6,7 @@ interface Devices {
     fun disable()
     fun getVolume(): Int
     fun setVolume(volume: Int)
-    fun getChannel(): String
-    fun setChannel(channel: Channels)
+    fun getChannel(): Int
+    fun setChannel(channel: Int)
     fun getStatus()
 }
