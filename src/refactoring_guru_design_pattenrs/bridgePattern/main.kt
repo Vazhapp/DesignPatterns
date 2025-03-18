@@ -1,0 +1,2 @@
+package refactoring_guru_design_pattenrs.bridgePattern
+
