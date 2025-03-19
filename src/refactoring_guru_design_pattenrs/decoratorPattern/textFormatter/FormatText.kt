@@ -10,8 +10,8 @@ interface FormatText {
         override fun buildString(): String = "$prefix ${formatText.buildString()}"
     }
 
-    class Sufix(private val sufix: String, private val formatText: FormatText) : FormatText {
-        override fun buildString(): String = "${formatText.buildString()} $sufix"
+    class Sufix(private val sufix: String) : FormatText {
+        override fun buildString(): String = sufix
     }
 
     class Uppercase(

@@ -1,6 +1,7 @@
 package refactoring_guru_design_pattenrs.decoratorPattern
 
 import refactoring_guru_design_pattenrs.decoratorPattern.dressUpExample.*
+import refactoring_guru_design_pattenrs.decoratorPattern.textFormatter.FormatText
 
 interface Notifier {
     fun send(message: String)
@@ -93,5 +94,19 @@ fun main() {
      *     println(womenClothing.dress())
      *     println(womenClothing.getCost())
      */
+
+    val text = FormatText.Prefix(
+        prefix = "-P-",
+        FormatText.Lowercase(
+            "vazha",
+            FormatText.Uppercase(
+                "kentchiashvili",
+                FormatText.Sufix("*S*")
+            )
+        )
+    ).buildString()
+
+    // The Result will be: -P- vazha KENTCHIASHVILI *S*
+    println(text)
 
 }
