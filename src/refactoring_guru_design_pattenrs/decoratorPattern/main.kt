@@ -52,43 +52,46 @@ class SlackDecorator(wrappee: Notifier) : BaseDecorator(wrappee) {
 }
 
 fun main() {
-    val notifier: Notifier = ConcreteNotifier()
-    val smsNotifier = SMSDecorator(notifier)
-    val facebookNotifier = FacebookDecorator(smsNotifier)
-    val slackNotifier = SlackDecorator(facebookNotifier)
+    /***
+     * val notifier: Notifier = ConcreteNotifier()
+     *     val smsNotifier = SMSDecorator(notifier)
+     *     val facebookNotifier = FacebookDecorator(smsNotifier)
+     *     val slackNotifier = SlackDecorator(facebookNotifier)
+     *
+     *     val sender = SMSDecorator(
+     *         SlackDecorator(
+     *             FacebookDecorator(
+     *                 notifier
+     *             )
+     *         )
+     *     )
+     *
+     *     val character: Character = BaseCharacter()
+     *     val manClothing = PantsDecorator(
+     *         ShirtDecorator(
+     *             ShoesDecorator(
+     *                 HatDecorator(
+     *                     character
+     *                 )
+     *             )
+     *         )
+     *     )
+     *     println(manClothing.dress())
+     *     println(manClothing.getCost())
+     *
+     *     val womenClothing = PantsDecorator(
+     *         ShirtDecorator(
+     *             JacketDecorator(
+     *                 ShoesDecorator(
+     *                     HatDecorator(
+     *                         character
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     )
+     *     println(womenClothing.dress())
+     *     println(womenClothing.getCost())
+     */
 
-    val sender = SMSDecorator(
-        SlackDecorator(
-            FacebookDecorator(
-                notifier
-            )
-        )
-    )
-
-    val character: Character = BaseCharacter()
-    val manClothing = PantsDecorator(
-        ShirtDecorator(
-            ShoesDecorator(
-                HatDecorator(
-                    character
-                )
-            )
-        )
-    )
-    println(manClothing.dress())
-    println(manClothing.getCost())
-
-    val womenClothing = PantsDecorator(
-        ShirtDecorator(
-            JacketDecorator(
-                ShoesDecorator(
-                    HatDecorator(
-                        character
-                    )
-                )
-            )
-        )
-    )
-    println(womenClothing.dress())
-    println(womenClothing.getCost())
 }
