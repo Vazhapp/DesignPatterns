@@ -1,4 +1,4 @@
-package refactoring_guru_design_pattenrs.decoratorPattern.example
+package refactoring_guru_design_pattenrs.decoratorPattern
 
 import refactoring_guru_design_pattenrs.decoratorPattern.dressUpExample.*
 
