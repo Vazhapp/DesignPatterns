@@ -9,8 +9,4 @@ import refactoring_guru_design_pattenrs.factoryMethodPattern.vehicleManufacturin
  */
 class CarFactory : VehicleFactory {
     override fun getVehicle(): Vehicle = Car()
-
-    override fun startEngine() {
-        getVehicle().startEngine()
-    }
 }

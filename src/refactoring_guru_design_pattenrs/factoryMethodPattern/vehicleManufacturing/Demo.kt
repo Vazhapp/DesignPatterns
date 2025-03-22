@@ -9,7 +9,6 @@ fun main() {
     val motorcycleFactory = MotorcycleFactory()
     val truckFactory = TruckFactory()
 
-    carFactory.startEngine()
-    motorcycleFactory.startEngine()
-    truckFactory.startEngine()
+    val car = carFactory.getVehicle()
+    car.startEngine()
 }

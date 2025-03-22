@@ -4,5 +4,4 @@ import refactoring_guru_design_pattenrs.factoryMethodPattern.vehicleManufacturin
 
 interface VehicleFactory {
     fun getVehicle(): Vehicle
-    fun startEngine()
 }
