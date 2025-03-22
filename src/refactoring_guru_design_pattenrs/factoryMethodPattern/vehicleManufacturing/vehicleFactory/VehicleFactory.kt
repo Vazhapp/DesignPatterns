@@ -3,5 +3,6 @@ package refactoring_guru_design_pattenrs.factoryMethodPattern.vehicleManufacturi
 import refactoring_guru_design_pattenrs.factoryMethodPattern.vehicleManufacturing.vehicle.Vehicle
 
 interface VehicleFactory {
-    fun getVehicle() : Vehicle
+    fun getVehicle(): Vehicle
+    fun startEngine()
 }
