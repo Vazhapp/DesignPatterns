@@ -2,6 +2,6 @@ package refactoring_guru_design_pattenrs.abstractFactory.crossPlatformUi.textFie
 
 class MacOsTextField : TextField {
     override fun renderTextField() {
-        println("Renderig MacOS Text Field")
+        println("Rendering MacOS Text Field")
     }
 }
