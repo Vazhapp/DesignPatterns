@@ -1,6 +1,6 @@
 package refactoring_guru_design_pattenrs.builderPattern
 
-import refactoring_guru_design_pattenrs.builderPattern.pcBuilder.builder.PersonalComputer
+import refactoring_guru_design_pattenrs.builderPattern.pcBuilder.PersonalComputer
 
 fun main() {
     val personalComputer = PersonalComputer.Builder()
