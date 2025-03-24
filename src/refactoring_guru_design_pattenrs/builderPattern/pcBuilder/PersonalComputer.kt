@@ -1,4 +1,4 @@
-package refactoring_guru_design_pattenrs.builderPattern.pcBuilder.builder
+package refactoring_guru_design_pattenrs.builderPattern.pcBuilder
 
 class PersonalComputer private constructor(
     val cpu: String,
