@@ -2,6 +2,7 @@ package refactoring_guru_design_pattenrs.singleton
 
 import refactoring_guru_design_pattenrs.singleton.nonThreadSafe.SingletonNonThreadSafe
 import refactoring_guru_design_pattenrs.singleton.threadSafe.SingletonThreadSafe
+import refactoring_guru_design_pattenrs.singleton.withLazy.SingletonWithLazy
 
 fun main() {
 //    val firstSingleton = SingletonNonThreadSafe.getInstance("First Singleton")
@@ -16,6 +17,8 @@ fun main() {
 
     threadFirst.start()
     threadSecond.start()
+
+    val singletonWithLazy = SingletonWithLazy.instance
 }
 
 class ThreadFirst : Runnable {
