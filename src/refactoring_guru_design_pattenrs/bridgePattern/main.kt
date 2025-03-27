@@ -2,6 +2,9 @@ package refactoring_guru_design_pattenrs.bridgePattern
 
 import refactoring_guru_design_pattenrs.bridgePattern.devices.Radio
 import refactoring_guru_design_pattenrs.bridgePattern.devices.TV
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.abstraction.Slack
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.implementation.APISender
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.implementation.MessageSender
 import refactoring_guru_design_pattenrs.bridgePattern.remotes.StandardRemote
 
 fun main() {
@@ -28,4 +31,8 @@ fun main() {
      *     radio.getStatus()
      */
 
+    val sender: MessageSender = APISender()
+
+    val slack = Slack(sender)
+    println(slack.notify("Sent Test Message via Slack"))
 }
