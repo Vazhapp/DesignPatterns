@@ -1,5 +1,9 @@
 package refactoring_guru_design_pattenrs.decoratorPattern
 
+import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.CoffeeDecorator
+import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.Milk
+import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.StandardCoffee
+import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.Sugar
 import refactoring_guru_design_pattenrs.decoratorPattern.dressUpExample.*
 import refactoring_guru_design_pattenrs.decoratorPattern.textFormatter.FormatText
 
@@ -111,5 +115,11 @@ fun main() {
      *     println(text)
      */
 
+    val coffee = Milk(
+        Sugar(
+            StandardCoffee()
+        )
+    ).cost()
 
+    println(coffee)
 }
