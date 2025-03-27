@@ -6,6 +6,10 @@ import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.StandardCoff
 import refactoring_guru_design_pattenrs.decoratorPattern.coffeeShop.Sugar
 import refactoring_guru_design_pattenrs.decoratorPattern.dressUpExample.*
 import refactoring_guru_design_pattenrs.decoratorPattern.textFormatter.FormatText
+import refactoring_guru_design_pattenrs.decoratorPattern.textStyle.BoldTextStyle
+import refactoring_guru_design_pattenrs.decoratorPattern.textStyle.ItalicTextStyle
+import refactoring_guru_design_pattenrs.decoratorPattern.textStyle.PlainText
+import refactoring_guru_design_pattenrs.decoratorPattern.textStyle.UnderlineTextStyle
 
 interface Notifier {
     fun send(message: String)
@@ -115,11 +119,23 @@ fun main() {
      *     println(text)
      */
 
-    val coffee = Milk(
-        Sugar(
-            StandardCoffee()
-        )
-    ).cost()
+//    val coffee = Milk(
+//        Sugar(
+//            StandardCoffee()
+//        )
+//    ).cost()
+//
+//    println(coffee)
 
-    println(coffee)
+    val receivedText = BoldTextStyle(
+        text = ItalicTextStyle(
+            text = UnderlineTextStyle(
+                text = PlainText(
+                    "You got messages from your friends"
+                )
+            )
+        )
+    ).render()
+
+    println(receivedText)
 }
