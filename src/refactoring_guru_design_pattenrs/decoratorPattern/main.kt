@@ -95,18 +95,21 @@ fun main() {
      *     println(womenClothing.getCost())
      */
 
-    val text = FormatText.Prefix(
-        prefix = "-P-",
-        FormatText.Lowercase(
-            "vazha",
-            FormatText.Uppercase(
-                "kentchiashvili",
-                FormatText.Sufix("*S*")
-            )
-        )
-    ).buildString()
+    /***
+     *     val text = FormatText.Prefix(
+     *         prefix = "-P-",
+     *         FormatText.Lowercase(
+     *             "vazha",
+     *             FormatText.Uppercase(
+     *                 "kentchiashvili",
+     *                 FormatText.Sufix("*S*")
+     *             )
+     *         )
+     *     ).buildString()
+     *
+     *     // The Result will be: -P- vazha KENTCHIASHVILI *S*
+     *     println(text)
+     */
 
-    // The Result will be: -P- vazha KENTCHIASHVILI *S*
-    println(text)
 
 }
