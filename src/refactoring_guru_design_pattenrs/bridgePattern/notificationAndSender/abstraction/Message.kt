@@ -1,7 +1,10 @@
 package refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.abstraction
 
-class Message : Notification() {
-    override fun notify(text: String) {
-        println("Notify $text")
-    }
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.implementation.MessageChannels
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.implementation.MessageSender
+
+class Message(
+    messageSender: MessageSender
+) : Notification(messageSender) {
+    override fun notify(text: String) = messageSender.sendMessageViaChannel(MessageChannels.MESSAGE)
 }

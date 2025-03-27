@@ -1,5 +1,9 @@
 package refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.abstraction
 
-abstract class Notification {
-    abstract fun notify(text: String)
+import refactoring_guru_design_pattenrs.bridgePattern.notificationAndSender.implementation.MessageSender
+
+abstract class Notification(
+    protected val messageSender: MessageSender
+) {
+    abstract fun notify(text: String): String
 }
