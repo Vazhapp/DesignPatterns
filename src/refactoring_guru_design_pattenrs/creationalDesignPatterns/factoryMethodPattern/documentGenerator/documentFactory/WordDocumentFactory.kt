@@ -1,0 +1,8 @@
+package refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.documentGenerator.documentFactory
+
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.documentGenerator.document.Document
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.documentGenerator.document.WordDocument
+
+class WordDocumentFactory : DocumentFactory {
+    override fun generateDocument(): Document = WordDocument()
+}

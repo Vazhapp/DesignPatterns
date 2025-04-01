@@ -1,0 +1,7 @@
+package refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.documentGenerator.documentFactory
+
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.documentGenerator.document.Document
+
+interface DocumentFactory {
+    fun generateDocument(): Document
+}

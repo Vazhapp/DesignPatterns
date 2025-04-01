@@ -1,0 +1,12 @@
+package refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.multiPlatformViews.factories
+
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.multiPlatformViews.buttons.Button
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.multiPlatformViews.buttons.WindowsButton
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.multiPlatformViews.checkboxes.Checkbox
+import refactoring_guru_design_pattenrs.creationalDesignPatterns.factoryMethodPattern.multiPlatformViews.checkboxes.WindowsCheckbox
+
+class WindowsFactory : GUIFactory {
+    override fun createButton(): Button = WindowsButton()
+
+    override fun createCheckbox(): Checkbox = WindowsCheckbox()
+}
