@@ -2,7 +2,7 @@ package refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.remote
 
 import refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.remoteControl.receiver.Radio
 
-class RadioTurnOffCommand(private val radio: Radio) : Command {
+class RadioOffCommand(private val radio: Radio) : Command {
     override fun exectute() {
         radio.turnOff()
     }
