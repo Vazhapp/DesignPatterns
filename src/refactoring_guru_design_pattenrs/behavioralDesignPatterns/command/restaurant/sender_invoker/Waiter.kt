@@ -9,4 +9,6 @@ class Waiter {
         command.execute()
         orderHistory.add(command)
     }
+
+    fun seeOrderHistory() = orderHistory.toString()
 }
