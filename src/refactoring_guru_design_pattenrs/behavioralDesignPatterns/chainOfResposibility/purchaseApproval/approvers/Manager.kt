@@ -7,7 +7,6 @@ class Manager : BasePurchaseApprover() {
     override fun canApprove(purchaseRequest: PurchaseRequest): Boolean =
         purchaseRequest.price <= 100
 
-    override fun processPurchase(purchaseRequest: PurchaseRequest) {
+    override fun processPurchase(purchaseRequest: PurchaseRequest) =
         println("Manager Approved This Purchase: ${purchaseRequest.description} \n Price: ${purchaseRequest.price}")
-    }
 }
