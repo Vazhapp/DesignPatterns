@@ -3,6 +3,6 @@ package refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.restau
 enum class Cocktail {
     SISXLIANI_MERI,
     MZIANI_SANAPIRO,
-    MYIVNTAVI,
+    MYVINTAVI,
     QARIANI_SULI;
 }
