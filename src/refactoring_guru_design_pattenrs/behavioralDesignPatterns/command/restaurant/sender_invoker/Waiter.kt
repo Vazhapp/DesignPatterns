@@ -10,5 +10,8 @@ class Waiter {
         orderHistory.add(command)
     }
 
-    fun seeOrderHistory() = orderHistory.toString()
+    fun orderEverythingAgain() = orderHistory.forEach {
+        println("Ordering AGAIN")
+        it.execute()
+    }
 }
