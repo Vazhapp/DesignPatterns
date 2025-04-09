@@ -7,6 +7,6 @@ class TeamLead : BasePurchaseApprover() {
     override fun canApprove(purchaseRequest: PurchaseRequest): Boolean =
         purchaseRequest.price <= 300
 
-    override fun processPurchase(purchaseRequest: PurchaseRequest) =
+    override fun approveRequest(purchaseRequest: PurchaseRequest) =
         println("Team Lead Approved This Purchase: ${purchaseRequest.description} \n Price: ${purchaseRequest.price}")
 }

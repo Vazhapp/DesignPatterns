@@ -8,13 +8,13 @@ abstract class BasePurchaseApprover : PurchaseApprover {
         return purchaseApprover
     }
 
-    override fun handlePurchase(purchaseRequest: PurchaseRequest) {
+    override fun processRequest(purchaseRequest: PurchaseRequest) {
         if (canApprove(purchaseRequest))
-            processPurchase(purchaseRequest)
+            approveRequest(purchaseRequest)
         else
-            nextHandler?.handlePurchase(purchaseRequest) ?: println("This purchase can't be approved")
+            nextHandler?.processRequest(purchaseRequest) ?: println("This purchase can't be approved")
     }
 
     abstract fun canApprove(purchaseRequest: PurchaseRequest): Boolean
-    abstract fun processPurchase(purchaseRequest: PurchaseRequest)
+    abstract fun approveRequest(purchaseRequest: PurchaseRequest)
 }

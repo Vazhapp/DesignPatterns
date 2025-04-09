@@ -58,6 +58,6 @@ fun main() {
 
     purchases.forEach { purchase ->
         println("Processing Purhcase: ${purchase.description} | Price: ${purchase.price}")
-        manager.handlePurchase(purchase)
+        manager.processRequest(purchase)
     }
 }
