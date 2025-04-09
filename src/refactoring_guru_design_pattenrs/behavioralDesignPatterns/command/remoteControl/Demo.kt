@@ -1,4 +1,4 @@
-package refactoring_guru_design_pattenrs.behavioralDesignPatterns.command
+package refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.remoteControl
 
 import refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.remoteControl.command.RadioOnCommand
 import refactoring_guru_design_pattenrs.behavioralDesignPatterns.command.remoteControl.command.RadioOffCommand
