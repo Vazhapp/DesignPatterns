@@ -1,7 +1,7 @@
 package refactoring_guru_design_pattenrs.behavioralDesignPatterns.mediator.airTrafficController
 
 class AirTrafficController {
-    private var registeredPlanes = mutableListOf<Plane>()
+    private val registeredPlanes = mutableListOf<Plane>()
 
     fun registerPlane(plane: Plane) {
         registeredPlanes.add(plane)
