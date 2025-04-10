@@ -13,9 +13,8 @@ abstract class BaseLogger : Logger {
     override fun log(logMessage: LogMessage) {
         if (canHandleLog(logMessage)) {
             writeLogMessage(logMessage)
-        } else {
-            currentLogger?.log(logMessage) ?: println("No loggers available!")
         }
+        currentLogger?.log(logMessage) ?: println("No loggers available!")
     }
 
     abstract fun canHandleLog(logMessage: LogMessage): Boolean
